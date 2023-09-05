@@ -35,22 +35,6 @@ output "public_route_table_ids" {
   value       = aws_route_table.eks_public_rt.*.id
   description = "List of IDs of Public Route Tables"
 }
-# output "transit_gateway_cidrs" {
-#   value       = local.var.network.routes.transit_gateway.cidr_blocks
-#   description = "transit_gateway_cidrs"  
-# }
-
-# output "prometheus_auth_pwd" {
-#   value       = contains(local.var.flags, "install_monitoring") ? random_password.prometheus_admin[0].result : ""
-#   description = "Prometheus Auth Password"
-#   sensitive   = true
-# }
-
-# output "grafana_auth_pwd" {
-#   value       = contains(local.var.flags, "install_monitoring") ? random_password.grafana_admin[0].result : ""
-#   description = "Grafana Auth Password"
-#   sensitive   = true
-# }
 
 output "eks_nodes_ssh_private_key" {
   value     = tls_private_key.k8s_nodes_private_key.private_key_pem

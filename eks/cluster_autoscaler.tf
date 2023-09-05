@@ -28,7 +28,7 @@ resource "helm_release" "cluster_autoscaler" {
   wait         = true
   # verify       = false
 
-  # See https://aws.github.io/aws-eks-best-practices/cluster-autoscaling/#reducing-the-scan-interval
+  # auto-scale: https://aws.github.io/aws-eks-best-practices/cluster-autoscaling/#reducing-the-scan-interval
   set {
     name  = "extraArgs.scan-interval"
     value = "1m"
