@@ -78,7 +78,7 @@ network = {
   eks_endpoint_public_access_cidrs = {
     external_ips = [
       "80.111.103.67/32",   # External IP of Zafer.Ulgur
-      "178.244.135.95/32",  # External IP
+      "178.244.135.95/32",  # External IP of second machine
     ]
   }
 
