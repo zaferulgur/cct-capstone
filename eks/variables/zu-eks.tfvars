@@ -65,13 +65,6 @@ network = {
     prefix_subnet = "10.96"
   }
 
-  routes = {
-    # transit_gateway = {
-    #   id = "tgw-06f31e1bffc246e7a"  # London-Transit-Gateway-01
-    #   cidr_blocks = []
-    # }
-  }
-
   allowed_cidrs_to_access_cluster = []
 
   # If need to access EKS cluster from public network, add the public ip in the below list
@@ -91,13 +84,3 @@ network = {
   }
 }
 
-########################### Setup Configuration Variables ###########################
-setup_configs = {
-  fluent_bit = {
-    # eks_app_index   = "Define an index for the running apps on the eks cluster!"
-    # eks_infra_index = "Define an index for the running as infra based apps on the eks cluster!"
-    # es_url          = "Define the target ElasticSearch URL!"
-    # es_user         = "Define the target ElasticSearch Username!"
-    # es_password     = "Define the target ElasticSearch Password! Ex:${eks_es_password}"
-  }
-}
